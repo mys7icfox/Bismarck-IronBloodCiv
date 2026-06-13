@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="your-civilization-mod" version="1" xmlns="ModInfo">
+  <Properties>
+    <n>Iron Blood</n>
+    <Description>Description of your civilization mod</Description>
+    <Authors>mys7icfox</Authors>
+    <Version>1.0.0</Version>
+    <AffectsSavedGames>1</AffectsSavedGames>
+  </Properties>
+  <Dependencies>
+    <Mod id="base-standard" title="LOC_MODULE_BASE_STANDARD_NAME"/>
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="age-modern-current">
+      <AgeInUse>AGE_MODERN</AgeInUse>
+    </Criteria>
+    <Criteria id="always">
+      <AlwaysMet/>
+    </Criteria>
+  </ActionCriteria>
+  <ActionGroups>
+    <ActionGroup id="main-group" scope="game" criteria="age-modern-current">
+      <Actions>
+        <UpdateDatabase>
+          <Item>civilizations/your_civilization.xml</Item>
+          {/*Add more files as needed*/}
+        </UpdateDatabase>
+      </Actions>
+    </ActionGroup>
+  </ActionGroups>
+</Mod>
